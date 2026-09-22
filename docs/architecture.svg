@@ -9,6 +9,8 @@
     <linearGradient id="jet" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#1F49B5"/><stop offset="35%" stop-color="#2FA35B"/><stop offset="65%" stop-color="#E8A317"/><stop offset="100%" stop-color="#A6220E"/></linearGradient>
     <linearGradient id="cw" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#3B4CC0"/><stop offset="50%" stop-color="#F2F2F2"/><stop offset="100%" stop-color="#B40426"/></linearGradient>
     <linearGradient id="slab" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#E7F1EA"/><stop offset="100%" stop-color="#B4D2C0"/></linearGradient>
+    <linearGradient id="hotcm" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#1A1A1A"/><stop offset="40%" stop-color="#C22B05"/><stop offset="75%" stop-color="#F4B400"/><stop offset="100%" stop-color="#FFF6DA"/></linearGradient>
+    <radialGradient id="hotb" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#FFF8E6" stop-opacity="0.95"/><stop offset="32%" stop-color="#F4B400" stop-opacity="0.78"/><stop offset="68%" stop-color="#C22B05" stop-opacity="0.5"/><stop offset="100%" stop-color="#1A1A1A" stop-opacity="0"/></radialGradient>
     <clipPath id="sector"><path d="M 0 0 L -75 132 Q 0 165 75 132 Z"/></clipPath>
     <g id="echo">
       <path d="M 0 0 L -75 132 Q 0 165 75 132 Z" fill="url(#ef)"/>
@@ -100,10 +102,10 @@
   <rect x="664" y="360" width="300" height="252" rx="7" fill="#FAF8FC" stroke="#B3A8CC" stroke-width="1.1"/>
   <text x="676" y="382" font-size="12.5" font-weight="700" fill="#5B4B8A">g</text><text x="692" y="382" font-size="12" font-weight="600" fill="#1B2A33">SHAP DeepExplainer values</text>
   <use href="#echo" transform="translate(814,392) scale(0.82)"/>
-  <g transform="translate(814,392) scale(0.82)"><g clip-path="url(#sector)"><ellipse cx="-18" cy="80" rx="34" ry="28" fill="url(#shp)"/><ellipse cx="22" cy="112" rx="26" ry="22" fill="url(#shn)"/><ellipse cx="-36" cy="128" rx="22" ry="18" fill="url(#shp)" opacity="0.75"/><ellipse cx="6" cy="52" rx="18" ry="14" fill="url(#shn)" opacity="0.7"/></g></g>
-  <rect x="744" y="552" width="140" height="12" fill="url(#cw)" stroke="#8D9AA3" stroke-width="0.7"/>
-  <g font-size="7.5" fill="#6B7780"><text x="744" y="576">negative</text><text x="884" y="576" text-anchor="end">positive</text><text x="814" y="576" text-anchor="middle">Shapley value</text></g>
-  <g font-size="8.5" fill="#33434D"><text x="676" y="594">DeepExplainer with ten random background images;</text><text x="676" y="606">channel-mean values on a diverging coolwarm map.</text></g>
+  <g transform="translate(814,392) scale(0.82)"><g clip-path="url(#sector)"><ellipse cx="-18" cy="80" rx="34" ry="28" fill="url(#hotb)"/><ellipse cx="22" cy="112" rx="26" ry="22" fill="url(#hotb)" opacity="0.8"/><ellipse cx="-36" cy="128" rx="22" ry="18" fill="url(#hotb)" opacity="0.65"/><ellipse cx="6" cy="52" rx="18" ry="14" fill="url(#hotb)" opacity="0.55"/></g></g>
+  <rect x="744" y="552" width="140" height="12" fill="url(#hotcm)" stroke="#8D9AA3" stroke-width="0.7"/>
+  <g font-size="7.5" fill="#6B7780"><text x="744" y="576">low</text><text x="884" y="576" text-anchor="end">high</text><text x="814" y="576" text-anchor="middle">mean absolute Shapley value</text></g>
+  <g font-size="8.5" fill="#33434D"><text x="676" y="594">DeepExplainer with ten random background images;</text><text x="676" y="606">channel-mean absolute values on a hot colour map.</text></g>
   <rect x="980" y="360" width="268" height="252" rx="7" fill="#FAF8FC" stroke="#B3A8CC" stroke-width="1.1"/>
   <text x="992" y="382" font-size="12.5" font-weight="700" fill="#5B4B8A">h</text><text x="1008" y="382" font-size="12" font-weight="600" fill="#1B2A33">Occlusion sensitivity</text>
   <g stroke="#ffffff" stroke-width="0.8"><rect x="1039" y="398" width="25" height="25" fill="#F4F4F4"/><rect x="1064" y="398" width="25" height="25" fill="#EFEFEF"/><rect x="1089" y="398" width="25" height="25" fill="#F7F0EA"/><rect x="1114" y="398" width="25" height="25" fill="#F4F4F4"/><rect x="1139" y="398" width="25" height="25" fill="#EDF1F7"/><rect x="1164" y="398" width="25" height="25" fill="#F4F4F4"/></g>
